@@ -15,7 +15,6 @@ class Name(Field):
     pass
 
 
-# ===== телефон =====
 class Phone(Field):
     def __init__(self, value):
         if not value.isdigit() or len(value) != 10:
@@ -23,7 +22,6 @@ class Phone(Field):
         super().__init__(value)
 
 
-# ===== день рождения =====
 class Birthday(Field):
     def __init__(self, value):
         try:
