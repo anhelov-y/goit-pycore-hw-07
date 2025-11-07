@@ -31,6 +31,7 @@ class Birthday(Field):
         super().__init__(value)
 
 
+
 # Клас запису та його функції 
 class Record:
     def __init__(self, name):
@@ -69,6 +70,7 @@ class Record:
         return f"Contact name: {self.name.value}, phones: {phones}, birthday: {birthday}"
 
 
+
 # Адресна книга та її функції 
 class AddressBook(UserDict):
     def add_record(self, record):
@@ -97,6 +99,7 @@ class AddressBook(UserDict):
         return result
 
 
+
 # Декоратор 
 def input_error(func):
     def inner(*args, **kwargs):
@@ -109,6 +112,7 @@ def input_error(func):
         except IndexError:
             return "Not enough parameters."
     return inner
+
 
 
 @input_error
@@ -149,6 +153,7 @@ def show_all(book):
     for record in book.data.values():
         result += str(record) + "\n"
     return result.strip()
+
 
 
 @input_error
